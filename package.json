@@ -1,0 +1,16 @@
+{
+  "name": "rozklad_avtobusiv_sumy",
+  "version": "1.0.0",
+  "description": "A simple project to display bus schedules in Sumy",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx @tailwindcss/cli -i ./styles.css -o ./output.css --content ./index.html",
+    "watch": "npx @tailwindcss/cli -i ./styles.css -o ./output.css --content ./index.html --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "tailwindcss": "^4.1.13"
+  }
+}
