@@ -5,6 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Розклад руху громадського транспорту м. Суми</title>
     <link rel="stylesheet" href="output.css">
+    <style>
+        :root {
+            --header-height: 180px;
+        }
+        html {
+            scroll-padding-top: var(--header-height);
+            scroll-behavior: smooth;
+        }
+        main {
+            padding-top: var(--header-height);
+        }
+    </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
 <header class="fixed top-0 left-0 right-0 bg-white/50 backdrop-blur-sm shadow-md z-40">
@@ -36,7 +48,7 @@
         </div>
     </div>
 </header>
-<main class="container mx-auto px-4 pb-8 pt-20">
+<main class="container mx-auto px-4 pb-8">
     <h3 class="text-xl font-semibold mb-2 text-center" id="route_57a">Маршрут 57А</h3>
     <div class="overflow-x-auto rounded-lg shadow mb-4 text-center">
         <table class="table-auto w-full">
@@ -1182,6 +1194,27 @@
                 }
             };
             window.addEventListener('scroll', onScroll);
+
+            const header = document.querySelector('header');
+
+            if (header) {
+                function updateHeaderHeight() {
+                    const paddingTop = 10;
+                    const height = Math.ceil(header.getBoundingClientRect().height);
+                    document.documentElement.style.setProperty('--header-height', `${height + paddingTop}px`)
+                }
+
+                updateHeaderHeight();
+                window.addEventListener('resize', updateHeaderHeight);
+
+                if (window.ResizeObserver) {
+                    const header = document.querySelector('header');
+                    if (header) {
+                        const resizeObserver = new ResizeObserver(updateHeaderHeight);
+                        resizeObserver.observe(header);
+                    }
+                }
+            }
         })();
     </script>
 </main>
