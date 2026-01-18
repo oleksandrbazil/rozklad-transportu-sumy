@@ -1,1 +1,24 @@
 @import "tailwindcss";
+
+:root {
+    --header-height: 180px;
+}
+html {
+    scroll-padding-top: var(--header-height);
+    scroll-behavior: smooth;
+}
+main {
+    padding-top: var(--header-height);
+}
+
+.is-soon {
+    @apply border border-green-600 rounded-sm p-1 bg-green-600/30;
+}
+
+.is-upcoming {
+    @apply border border-blue-600 rounded-sm p-1 bg-blue-600/30;
+}
+
+.is-recently-passed {
+    @apply border border-red-600 rounded-sm p-1 bg-red-600/30;
+}
