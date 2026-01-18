@@ -25,67 +25,61 @@
           Розклад руху
           <span class="block sm:inline"> громадського транспорту м. Суми</span>
         </h1>
-        <div class="flex items-start justify-between space-x-4">
-            <nav aria-label="Маршрути">
-                <h2 class="font-semibold mb-2">Маршрути:</h2>
-                <ul class="list-none p-0 m-0 flex flex-wrap gap-1 items-center" role="list">
-                    <li class="inline text-center">
-                        <a href="#route_57a" class="text-blue-600 hover:underline inline-block border p-1 w-13">
-                            57А
-                        </a>
-                    </li>
-                    <li class="inline text-center">
-                        <a href="#route_58a" class="text-blue-600 hover:underline inline-block border p-1 w-13">
-                            58А
-                        </a>
-                    </li>
-                    <li class="inline text-center">
-                        <a href="#route_59a" class="text-blue-600 hover:underline inline-block border p-1 w-13">
-                            59А
-                        </a>
-                    </li>
-                    <li class="inline text-center">
-                        <a href="#route_59" class="text-blue-600 hover:underline inline-block border p-1 w-13">
-                            59
-                        </a>
-                    </li>
-                    <li class="inline text-center">
-                        <a href="#route_60a" class="text-blue-600 hover:underline inline-block border p-1 w-13">
-                            60А
-                        </a>
-                    </li>
-                    <li class="inline text-center">
-                        <a href="#route_62" class="text-blue-600 hover:underline inline-block border p-1 w-13">
-                            62
-                        </a>
-                    </li>
-                    <li class="inline text-center">
-                        <a href="#route_63" class="text-blue-600 hover:underline inline-block border p-1 w-13">
-                            63
-                        </a>
-                    </li>
-                    <li class="inline text-center">
-                        <a href="#route_64" class="text-blue-600 hover:underline inline-block border p-1 w-13">
-                            64
-                        </a>
-                    </li>
-                    <li class="inline text-center">
-                        <a href="#route_64a" class="text-blue-600 hover:underline inline-block border p-1 w-13">
-                            64А
-                        </a>
-                    </li>
-                    <li class="inline text-center">
-                        <a href="#route_67" class="text-blue-600 hover:underline inline-block border p-1 w-13">
-                            67
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="text-gray-600 flex flex-col items-center">
-                <span class="font-semibold mb-2">Час:</span>
-                <time id="currentTime" datetime="" class="w-18 text-center">--:--:--</time>
-            </div>
-        </div>
+        <nav aria-label="Маршрути">
+            <h2 class="font-semibold mb-2">Маршрути:</h2>
+            <ul class="list-none p-0 m-0 flex flex-wrap gap-1 items-center" role="list">
+                <li class="inline text-center">
+                    <a href="#route_57a" class="text-blue-600 hover:underline inline-block border p-1 w-13">
+                        57А
+                    </a>
+                </li>
+                <li class="inline text-center">
+                    <a href="#route_58a" class="text-blue-600 hover:underline inline-block border p-1 w-13">
+                        58А
+                    </a>
+                </li>
+                <li class="inline text-center">
+                    <a href="#route_59a" class="text-blue-600 hover:underline inline-block border p-1 w-13">
+                        59А
+                    </a>
+                </li>
+                <li class="inline text-center">
+                    <a href="#route_59" class="text-blue-600 hover:underline inline-block border p-1 w-13">
+                        59
+                    </a>
+                </li>
+                <li class="inline text-center">
+                    <a href="#route_60a" class="text-blue-600 hover:underline inline-block border p-1 w-13">
+                        60А
+                    </a>
+                </li>
+                <li class="inline text-center">
+                    <a href="#route_62" class="text-blue-600 hover:underline inline-block border p-1 w-13">
+                        62
+                    </a>
+                </li>
+                <li class="inline text-center">
+                    <a href="#route_63" class="text-blue-600 hover:underline inline-block border p-1 w-13">
+                        63
+                    </a>
+                </li>
+                <li class="inline text-center">
+                    <a href="#route_64" class="text-blue-600 hover:underline inline-block border p-1 w-13">
+                        64
+                    </a>
+                </li>
+                <li class="inline text-center">
+                    <a href="#route_64a" class="text-blue-600 hover:underline inline-block border p-1 w-13">
+                        64А
+                    </a>
+                </li>
+                <li class="inline text-center">
+                    <a href="#route_67" class="text-blue-600 hover:underline inline-block border p-1 w-13">
+                        67
+                    </a>
+                </li>
+            </ul>
+        </nav>
     </div>
 </header>
 <main class="container mx-auto px-4 pb-8">
@@ -1189,6 +1183,7 @@
             </tbody>
         </table>
     </div>
+    <time id="currentTime" datetime="" class="w-18 text-center">--:--:--</time>
     <script>
         (function(){
             const el = document.getElementById('currentTime');
