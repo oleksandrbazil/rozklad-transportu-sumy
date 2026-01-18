@@ -1206,8 +1206,8 @@
                 if (hash) {
                     const link = document.querySelector(`nav a[href="${hash}"]`);
                     if (link) {
-                        document.querySelectorAll('nav a').forEach(a => a.classList.remove('font-bold'));
-                        link.classList.add('font-bold');
+                        document.querySelectorAll('nav a').forEach(a => a.classList.remove('bg-blue-600', 'text-gray-50', 'border-blue-600'));
+                        link.classList.add('bg-blue-600', 'text-gray-50', 'border-blue-600');
                     }
                 }
             };
