@@ -7,10 +7,20 @@
     <link rel="stylesheet" href="output.css">
 </head>
 <body class="bg-gray-50 text-gray-800">
-<div class="container mx-auto px-4 py-8">
-    <h1 class="text-2xl font-bold mb-6">Розклад руху громадського транспорту м. Суми</h1>
-    <p class="text-sm text-gray-600 mb-4">Дата розкладу: <time datetime="2026-01-18">18.01.2026</time></p>
-
+<header class="fixed top-0 left-0 right-0 bg-white/50 backdrop-blur-sm shadow-md z-40">
+    <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+        <div class="text-gray-600 flex items-center space-x-2">
+            <span class="text-sm">Дата розкладу:</span>
+            <time datetime="2026-01-18">18.01.2026</time>
+        </div>
+        <h1 class="text-lg font-bold">Розклад руху громадського транспорту м. Суми</h1>
+        <div class="text-gray-600 flex items-center space-x-2">
+            <span class="text-sm">Поточний час:</span>
+            <time id="currentTime" datetime="" class="w-14">--:--:--</time>
+        </div>
+    </div>
+</header>
+<div class="container mx-auto px-4 pb-8 pt-20">
     <h2 class="text-lg font-semibold mb-2">Маршрути:</h2>
     <ul class="list-disc list-inside space-y-1 mb-4">
         <li><a href="#route_57а" class="text-blue-600 hover:underline">57А</a></li>
@@ -24,7 +34,6 @@
         <li><a href="#route_64а" class="text-blue-600 hover:underline">64А</a></li>
         <li><a href="#route_67" class="text-blue-600 hover:underline">67</a></li>
     </ul>
-
     <h3 class="text-xl font-semibold mb-2 text-center" id="route_57а">Маршрут 57А</h3>
     <div class="overflow-x-auto rounded-lg shadow mb-4 text-center">
         <table class="table-auto w-full">
@@ -1125,6 +1134,19 @@
             </tbody>
         </table>
     </div>
+    <script>
+        (function(){
+            const el = document.getElementById('currentTime');
+            if (!el) return;
+            function updateTime(){
+                const now = new Date();
+                el.textContent = now.toLocaleTimeString([], {hour:'2-digit', minute:'2-digit', second:'2-digit'});
+                el.setAttribute('datetime', now.toISOString());
+            }
+            updateTime();
+            setInterval(updateTime, 1000);
+        })();
+    </script>
 </div>
 </body>
 </html>
