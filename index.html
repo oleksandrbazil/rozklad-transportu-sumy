@@ -1182,8 +1182,13 @@
                     }
                 })
             }
+            const currentTime = new Date();
+            const millisecondsToNextMinute =ONE_MINUTE - (currentTime.getSeconds() * 1000 + currentTime.getMilliseconds());
+            setTimeout(() => {
+                updateTime();
+                setInterval(updateTime, ONE_MINUTE);
+            }, millisecondsToNextMinute);
             updateTime();
-            setInterval(updateTime, ONE_MINUTE);
 
             const highlightCurrentRoute = () => {
                 const hash = window.location.hash.toLowerCase();
