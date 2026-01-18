@@ -1161,6 +1161,27 @@
             };
             highlightCurrentRoute()
             window.addEventListener('hashchange', highlightCurrentRoute);
+
+            const routeSections = document.querySelectorAll('h3[id]');
+            const onScroll = () => {
+                let closestSection = null;
+                let closestDistance = Infinity;
+                routeSections.forEach(section => {
+                    const rect = section.getBoundingClientRect();
+                    if (rect.top >= 0 && rect.top < closestDistance) {
+                        closestDistance = rect.top;
+                        closestSection = section;
+                    }
+                });
+                if (closestSection) {
+                    const newHash = `#${closestSection.id}`;
+                    if (window.location.hash !== newHash) {
+                        history.replaceState(null, null, newHash);
+                        highlightCurrentRoute();
+                    }
+                }
+            };
+            window.addEventListener('scroll', onScroll);
         })();
     </script>
 </div>
