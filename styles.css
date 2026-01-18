@@ -12,39 +12,39 @@ main {
 }
 
 nav li {
-    @apply inline text-center
+    @apply inline text-center;
 }
 
 nav a {
-    @apply text-blue-600 hover:underline inline-block border p-1 w-13
+    @apply text-blue-600 hover:underline inline-block border p-1 w-13;
 }
 
 nav a.is-active {
-    @apply bg-blue-600 text-gray-50 border-blue-600
+    @apply bg-blue-600 text-gray-50 border-blue-600;
 }
 
 .route-table {
-    @apply table-auto w-full
+    @apply table-auto w-full;
 }
 
 .route-table thead {
-    @apply sticky top-0 z-10 bg-blue-100 shadow-md
+    @apply sticky top-0 z-10 bg-blue-100 shadow-md;
 }
 
 .route-table thead tr {
-    @apply text-gray-700 font-bold
+    @apply text-gray-700 font-bold;
 }
 
 .route-table thead th {
-    @apply border border-gray-200 px-4 py-2
+    @apply border border-gray-200 px-4 py-2;
 }
 
 .route-table tbody tr {
-    @apply even:bg-white odd:bg-gray-100
+    @apply even:bg-white odd:bg-gray-100;
 }
 
 .route-table tbody td {
-    @apply border border-gray-200 px-4 py-2
+    @apply border border-gray-200 px-4 py-2;
 }
 
 .is-soon {
