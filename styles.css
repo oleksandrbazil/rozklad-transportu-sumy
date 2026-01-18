@@ -11,6 +11,18 @@ main {
     padding-top: var(--header-height);
 }
 
+nav li {
+    @apply inline text-center
+}
+
+nav a {
+    @apply text-blue-600 hover:underline inline-block border p-1 w-13
+}
+
+nav a.is-active {
+    @apply bg-blue-600 text-gray-50 border-blue-600
+}
+
 .route-table {
     @apply table-auto w-full
 }

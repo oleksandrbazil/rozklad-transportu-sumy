@@ -16,56 +16,16 @@
         <nav aria-label="Маршрути">
             <h2 class="font-semibold mb-2">Маршрути:</h2>
             <ul class="list-none p-0 m-0 flex flex-wrap gap-1 items-center" role="list">
-                <li class="inline text-center">
-                    <a href="#route_57a" class="text-blue-600 hover:underline inline-block border p-1 w-13">
-                        57А
-                    </a>
-                </li>
-                <li class="inline text-center">
-                    <a href="#route_58a" class="text-blue-600 hover:underline inline-block border p-1 w-13">
-                        58А
-                    </a>
-                </li>
-                <li class="inline text-center">
-                    <a href="#route_59a" class="text-blue-600 hover:underline inline-block border p-1 w-13">
-                        59А
-                    </a>
-                </li>
-                <li class="inline text-center">
-                    <a href="#route_59" class="text-blue-600 hover:underline inline-block border p-1 w-13">
-                        59
-                    </a>
-                </li>
-                <li class="inline text-center">
-                    <a href="#route_60a" class="text-blue-600 hover:underline inline-block border p-1 w-13">
-                        60А
-                    </a>
-                </li>
-                <li class="inline text-center">
-                    <a href="#route_62" class="text-blue-600 hover:underline inline-block border p-1 w-13">
-                        62
-                    </a>
-                </li>
-                <li class="inline text-center">
-                    <a href="#route_63" class="text-blue-600 hover:underline inline-block border p-1 w-13">
-                        63
-                    </a>
-                </li>
-                <li class="inline text-center">
-                    <a href="#route_64" class="text-blue-600 hover:underline inline-block border p-1 w-13">
-                        64
-                    </a>
-                </li>
-                <li class="inline text-center">
-                    <a href="#route_64a" class="text-blue-600 hover:underline inline-block border p-1 w-13">
-                        64А
-                    </a>
-                </li>
-                <li class="inline text-center">
-                    <a href="#route_67" class="text-blue-600 hover:underline inline-block border p-1 w-13">
-                        67
-                    </a>
-                </li>
+                <li><a href="#route_57a">57А</a></li>
+                <li><a href="#route_58a">58А</a></li>
+                <li><a href="#route_59a">59А</a></li>
+                <li><a href="#route_59">59</a></li>
+                <li><a href="#route_60a">60А</a></li>
+                <li><a href="#route_62">62</a></li>
+                <li><a href="#route_63">63</a></li>
+                <li><a href="#route_64">64</a></li>
+                <li><a href="#route_64a">64А</a></li>
+                <li><a href="#route_67">67</a></li>
             </ul>
         </nav>
     </div>
@@ -1229,9 +1189,9 @@
                 const hash = window.location.hash.toLowerCase();
                 if (hash) {
                     const link = document.querySelector(`nav a[href="${hash}"]`);
+                    document.querySelectorAll('nav a').forEach(a => a.classList.remove('is-active'));
                     if (link) {
-                        document.querySelectorAll('nav a').forEach(a => a.classList.remove('bg-blue-600', 'text-gray-50', 'border-blue-600'));
-                        link.classList.add('bg-blue-600', 'text-gray-50', 'border-blue-600');
+                        link.classList.add('is-active');
                     }
                 }
             };

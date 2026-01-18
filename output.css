@@ -235,20 +235,11 @@
   .flex {
     display: flex;
   }
-  .inline {
-    display: inline;
-  }
-  .inline-block {
-    display: inline-block;
-  }
   .w-1\/2 {
     width: calc(1/2 * 100%);
   }
   .w-1\/4 {
     width: calc(1/4 * 100%);
-  }
-  .w-13 {
-    width: calc(var(--spacing) * 13);
   }
   .resize {
     resize: both;
@@ -288,14 +279,8 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
-  .border-blue-600 {
-    border-color: var(--color-blue-600);
-  }
   .border-gray-200 {
     border-color: var(--color-gray-200);
-  }
-  .bg-blue-600 {
-    background-color: var(--color-blue-600);
   }
   .bg-gray-50 {
     background-color: var(--color-gray-50);
@@ -308,9 +293,6 @@
   }
   .p-0 {
     padding: calc(var(--spacing) * 0);
-  }
-  .p-1 {
-    padding: calc(var(--spacing) * 1);
   }
   .px-4 {
     padding-inline: calc(var(--spacing) * 4);
@@ -347,12 +329,6 @@
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
   }
-  .text-blue-600 {
-    color: var(--color-blue-600);
-  }
-  .text-gray-50 {
-    color: var(--color-gray-50);
-  }
   .text-gray-600 {
     color: var(--color-gray-600);
   }
@@ -375,13 +351,6 @@
     -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
     backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
   }
-  .hover\:underline {
-    &:hover {
-      @media (hover: hover) {
-        text-decoration-line: underline;
-      }
-    }
-  }
   .sm\:inline {
     @media (width >= 40rem) {
       display: inline;
@@ -397,6 +366,28 @@ html {
 }
 main {
   padding-top: var(--header-height);
+}
+nav li {
+  display: inline;
+  text-align: center;
+}
+nav a {
+  display: inline-block;
+  width: calc(var(--spacing) * 13);
+  border-style: var(--tw-border-style);
+  border-width: 1px;
+  padding: calc(var(--spacing) * 1);
+  color: var(--color-blue-600);
+  &:hover {
+    @media (hover: hover) {
+      text-decoration-line: underline;
+    }
+  }
+}
+nav a.is-active {
+  border-color: var(--color-blue-600);
+  background-color: var(--color-blue-600);
+  color: var(--color-gray-50);
 }
 .route-table {
   width: 100%;
