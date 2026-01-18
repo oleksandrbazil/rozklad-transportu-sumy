@@ -184,9 +184,6 @@
   .fixed {
     position: fixed;
   }
-  .sticky {
-    position: sticky;
-  }
   .top-0 {
     top: calc(var(--spacing) * 0);
   }
@@ -195,9 +192,6 @@
   }
   .left-0 {
     left: calc(var(--spacing) * 0);
-  }
-  .z-10 {
-    z-index: 10;
   }
   .z-40 {
     z-index: 40;
@@ -256,12 +250,6 @@
   .w-13 {
     width: calc(var(--spacing) * 13);
   }
-  .w-full {
-    width: 100%;
-  }
-  .table-auto {
-    table-layout: auto;
-  }
   .resize {
     resize: both;
   }
@@ -305,9 +293,6 @@
   }
   .border-gray-200 {
     border-color: var(--color-gray-200);
-  }
-  .bg-blue-100 {
-    background-color: var(--color-blue-100);
   }
   .bg-blue-600 {
     background-color: var(--color-blue-600);
@@ -371,9 +356,6 @@
   .text-gray-600 {
     color: var(--color-gray-600);
   }
-  .text-gray-700 {
-    color: var(--color-gray-700);
-  }
   .text-gray-800 {
     color: var(--color-gray-800);
   }
@@ -392,16 +374,6 @@
     --tw-backdrop-blur: blur(var(--blur-sm));
     -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
     backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
-  }
-  .odd\:bg-gray-100 {
-    &:nth-child(odd) {
-      background-color: var(--color-gray-100);
-    }
-  }
-  .even\:bg-white {
-    &:nth-child(even) {
-      background-color: var(--color-white);
-    }
   }
   .hover\:underline {
     &:hover {
@@ -425,6 +397,45 @@ html {
 }
 main {
   padding-top: var(--header-height);
+}
+.route-table {
+  width: 100%;
+  table-layout: auto;
+}
+.route-table thead {
+  position: sticky;
+  top: calc(var(--spacing) * 0);
+  z-index: 10;
+  background-color: var(--color-blue-100);
+  --tw-shadow: 0 4px 6px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 2px 4px -2px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+  box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+}
+.route-table thead tr {
+  --tw-font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-gray-700);
+}
+.route-table thead th {
+  border-style: var(--tw-border-style);
+  border-width: 1px;
+  border-color: var(--color-gray-200);
+  padding-inline: calc(var(--spacing) * 4);
+  padding-block: calc(var(--spacing) * 2);
+}
+.route-table tbody tr {
+  &:nth-child(odd) {
+    background-color: var(--color-gray-100);
+  }
+  &:nth-child(even) {
+    background-color: var(--color-white);
+  }
+}
+.route-table tbody td {
+  border-style: var(--tw-border-style);
+  border-width: 1px;
+  border-color: var(--color-gray-200);
+  padding-inline: calc(var(--spacing) * 4);
+  padding-block: calc(var(--spacing) * 2);
 }
 .is-soon {
   border-radius: var(--radius-sm);

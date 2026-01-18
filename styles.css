@@ -11,6 +11,30 @@ main {
     padding-top: var(--header-height);
 }
 
+.route-table {
+    @apply table-auto w-full
+}
+
+.route-table thead {
+    @apply sticky top-0 z-10 bg-blue-100 shadow-md
+}
+
+.route-table thead tr {
+    @apply text-gray-700 font-bold
+}
+
+.route-table thead th {
+    @apply border border-gray-200 px-4 py-2
+}
+
+.route-table tbody tr {
+    @apply even:bg-white odd:bg-gray-100
+}
+
+.route-table tbody td {
+    @apply border border-gray-200 px-4 py-2
+}
+
 .is-soon {
     @apply border border-green-600 rounded-sm p-1 bg-green-600/30;
 }
